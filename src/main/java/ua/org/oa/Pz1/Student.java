@@ -6,18 +6,14 @@ public class Student {
      String Name;
      String Surmane;
      String Group;
-     String [] Exams;
      String Faculty;
 
     @Override
     public String toString() {
-        return "Student{" +
-                "Name='" + Name + '\'' +
-                ", Surmane='" + Surmane + '\'' +
-                ", Group='" + Group + '\'' +
-                ", Exams=" + Arrays.toString(Exams) +
-                ", Faculty='" + Faculty + '\'' +
-                '}';
+        return "Name " + Name +
+                ", Surmane " + Surmane +
+                ", Group " + Group +
+                ", Faculty " + Faculty;
     }
 
     public Student(String name, String surmane, String group, String faculty) {
@@ -60,17 +56,6 @@ public class Student {
         Group = group;
     }
 
-    public String[] getExams() {
-
-        return Exams;
-
-    }
-
-    public void setExams(String[] exams) {
-        Exams = exams;
-    }
-
-
 
     public static String NameAdd(String Name, String Surmane){
 
@@ -81,46 +66,48 @@ public class Student {
 
 
 
+
     public static class AddExam {
         String Exam;
-        int [] Mark= {3,4,3,2};
+        int Mark;
         int Year;
         int Semestr;
 
 
-        public AddExam(String exam,  int year, int semestr, int[] mark) {
+        public AddExam(String exam,  int year, int semestr, int mark) {
             Exam = exam;
             Mark = mark;
             Year = year;
             Semestr = semestr;
-        }
-
-        public AddExam(String exam, int year, int semestr, int mark) {
 
         }
+
+
 
 
         @Override
         public String toString() {
-            return "AddExam{" +
-                    "Exam='" + Exam + '\'' +
-                    ", Mark=" + Arrays.toString(Mark) +
-                    ", Year=" + Year +
-                    ", Semestr=" + Semestr +
-                    '}';
+            return  "Exam " + Exam +
+                    ", Mark " + Mark +
+                    ", Year " + Year +
+                    ", Semestr " + Semestr;
         }
+
+
+
 
 
         static int getMaximum(int[]  Mark){
 
             int max = 0;
+
             for (int i = 0; i < Mark.length; i++)
                 if (max < Mark[i])
                     max =Mark[i];
+            System.out.println("high mark");
+            System.out.println(max);
+
             return max;
-
-
-
 
         }
 
@@ -132,11 +119,11 @@ public class Student {
             Exam = exam;
         }
 
-        public int[] getMark() {
+        public int getMark() {
             return Mark;
         }
 
-        public void setMark(int[] mark) {
+        public void setMark(int mark) {
             Mark = mark;
         }
 
