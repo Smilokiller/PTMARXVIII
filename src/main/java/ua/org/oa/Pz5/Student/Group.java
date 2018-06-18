@@ -54,5 +54,5 @@ public class Group implements Serializable{
                 ", StudentList=" + StudentList +
                 '}';
     }
-    
+
 }
