@@ -1,4 +1,4 @@
-package ua.org.oa;
+package ua.org.oa.Hw1;
 
 
 public  class Car {

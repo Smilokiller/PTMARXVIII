@@ -24,7 +24,7 @@ public class App {
         System.out.println(WorkWithBooks.deSerializable("BookSerial"));
         System.out.println("----------------------------------------------------------------------");
 
-        FileEditor.newFile("new  file");
+        FileEditor.newFile("new  file1");
         FileEditor.renameToFile("Book", "book ");
         FileEditor.deleteFile("boo");
 
