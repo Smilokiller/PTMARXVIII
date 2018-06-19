@@ -1,7 +1,9 @@
 package ua.org.oa.Pz6;
 
+import java.io.IOException;
+
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Thread thread = Thread.currentThread();
         WorkWithThreads workWithTreads = new WorkWithThreads(thread);
            workWithTreads.writeName();
@@ -20,5 +22,12 @@ public class App {
         MyShedule.map.put(500,"message 5");
 
         MyShedule.run();
+CopyFiles.copyDir("C:\\Users\\smilo\\Desktop\\PTMARXVIII\\CopyOrSearchPack","C:\\Users\\smilo\\Desktop\\PTMARXVIII\\CopyOrSearchPack1");
+
+        try {
+            Filter.processFilesFromFolder();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
